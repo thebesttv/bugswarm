@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y git sudo gnupg \
 	ln -snf /usr/share/zoneinfo/America/Los_Angeles /etc/localtime && \
 	echo America/Los_Angeles > /etc/timezone
 USER bugswarm
-RUN cd /home/bugswarm; git clone https://github.com/BugSwarm/bugswarm
+RUN cd /home/bugswarm; git clone https://github.com/thebesttv/bugswarm
 WORKDIR /home/bugswarm/bugswarm/
 RUN sudo su bugswarm -c ./provision.sh && \
 	echo "source /etc/profile.d/rvm.sh" >> /home/bugswarm/.bashrc && \
